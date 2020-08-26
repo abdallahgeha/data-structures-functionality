@@ -58,7 +58,36 @@ class LinkedList {
 
     previousNode.next = previousNode.next.next;
     this.length--;
-    
+
+    return this;
+  }
+
+  clear() {
+    this.head = null;
+    this.length = 0;
+  }
+
+  getTail() {
+    return this.getByIndex(this.length - 1);
+  }
+
+  pop() {
+    const firstElement = this.head;
+    this.head = this.head.next;
+    this.length--
+    return firstElement;
+  }
+
+  concat(newLinkedList) {
+    const tail = this.getTail();
+    tail.next = newLinkedList.head;
+    this.length += newLinkedList.length;
+    return this
+  }
+
+  append(data) {
+    this.getTail().next = new LinkedListNode(data)
+    this.length++
     return this
   }
 
