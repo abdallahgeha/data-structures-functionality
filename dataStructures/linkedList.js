@@ -74,7 +74,7 @@ class LinkedList {
   pop() {
     const firstElement = this.head;
     this.head = this.head.next;
-    this.length--
+    this.length--;
     return firstElement;
   }
 
@@ -82,13 +82,13 @@ class LinkedList {
     const tail = this.getTail();
     tail.next = newLinkedList.head;
     this.length += newLinkedList.length;
-    return this
+    return this;
   }
 
   append(data) {
-    this.getTail().next = new LinkedListNode(data)
-    this.length++
-    return this
+    this.getTail().next = new LinkedListNode(data);
+    this.length++;
+    return this;
   }
 
   print() {
