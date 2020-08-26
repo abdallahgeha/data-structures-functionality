@@ -37,11 +37,13 @@ class Stack {
     for (let i = 0; i < values.length; i++) {
       this.push(values[i]);
     }
+    return this;
   }
 
   toArray() {
     return this.container;
   }
+
   clear() {
     this.head = null;
     this.length = 0;
