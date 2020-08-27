@@ -1,7 +1,7 @@
 class Queue {
   constructor(maxSize) {
     this.container = [];
-    this.maxSize = maxSize || 10;
+    this.maxSize = maxSize || Number.MAX_SAFE_INTEGER;
   }
 
   get count() {
