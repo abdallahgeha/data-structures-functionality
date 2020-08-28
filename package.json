@@ -1,0 +1,31 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "Add data structures from other languges into JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdallahgeha/data-structures.git"
+  },
+  "keywords": [
+    "data",
+    "strutures",
+    "tree",
+    "graph",
+    "stack",
+    "queue",
+    "linkedlist"
+  ],
+  "author": "Abdallah Geha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdallahgeha/data-structures/issues"
+  },
+  "homepage": "https://github.com/abdallahgeha/data-structures#readme",
+  "devDependencies": {
+    "ts-migrate": "^0.1.1"
+  }
+}
