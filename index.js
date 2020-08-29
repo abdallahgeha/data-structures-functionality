@@ -1,7 +1,7 @@
 const LinkedList = require("./dataStructures/linkedList");
 const Stack = require("./dataStructures/stack");
 const Queue = require("./dataStructures/queue");
-const { Tree, Node } = require("./dataStructures/tree");
+const Tree = require("./dataStructures/tree");
 
 function printDataStructures(dataStructures) {
   dataStructures.forEach((dataStructure) => dataStructure.print());

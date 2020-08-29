@@ -9,16 +9,22 @@ class LinkedList {
     }
   }
 
-  insertAtHead(data) {
-    const newNode = new LinkedListNode(data, this.head);
+  prepend(data) {
+    const newNode = new Node(data, this.head);
     this.head = newNode;
     this.length += 1;
     return this;
   }
 
+  append(data) {
+    this.getTail().next = new Node(data);
+    this.length++;
+    return this;
+  }
+
   generateFromArray(values) {
     for (let i = values.length - 1; i >= 0; i--) {
-      this.insertAtHead(values[i]);
+      this.prepend(values[i]);
     }
   }
 
@@ -33,12 +39,12 @@ class LinkedList {
   }
 
   insertAtIndex(index, value) {
-    if (index == 0) return this.insertAtHead(value);
+    if (index == 0) return this.prepend(value);
 
     const previousNode = this.getByIndex(index - 1);
     if (previousNode == null) return this;
 
-    previousNode.next = new LinkedListNode(value, previousNode.next);
+    previousNode.next = new Node(value, previousNode.next);
     this.length++;
 
     return this;
@@ -62,6 +68,38 @@ class LinkedList {
     return this;
   }
 
+  reverse() {
+    let currNode = this.head;
+    let prevNode = null;
+    let nextNode = null;
+
+    while (currNode) {
+      nextNode = currNode.next;
+
+      currNode.next = prevNode;
+
+      prevNode = currNode;
+      currNode = nextNode;
+    }
+
+    this.tail = this.head;
+    this.head = prevNode;
+
+    return this;
+  }
+
+  toArray() {
+    const nodes = [];
+
+    let currentNode = this.head;
+    while (currentNode) {
+      nodes.push(currentNode);
+      currentNode = currentNode.next;
+    }
+
+    return nodes;
+  }
+
   clear() {
     this.head = null;
     this.length = 0;
@@ -78,16 +116,11 @@ class LinkedList {
     return firstElement;
   }
 
+
   concat(newLinkedList) {
     const tail = this.getTail();
     tail.next = newLinkedList.head;
     this.length += newLinkedList.length;
-    return this;
-  }
-
-  append(data) {
-    this.getTail().next = new LinkedListNode(data);
-    this.length++;
     return this;
   }
 
@@ -102,7 +135,7 @@ class LinkedList {
   }
 }
 
-class LinkedListNode {
+class Node {
   constructor(value, next) {
     this.value = value;
     this.next = next;

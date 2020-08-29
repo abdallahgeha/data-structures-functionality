@@ -1,6 +1,6 @@
 const Queue = require("./queue");
 
-class graph {
+class Graph {
   constructor() {
     this._nodes = new Map();
     this._edges = new Map();
@@ -126,3 +126,5 @@ class Node {
     this.value = value;
   }
 }
+
+module.exports = Graph

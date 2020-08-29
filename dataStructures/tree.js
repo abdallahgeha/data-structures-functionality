@@ -120,4 +120,4 @@ class Node {
   }
 }
 
-module.exports = { Tree, Node };
+module.exports = Tree;
