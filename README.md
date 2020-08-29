@@ -6,7 +6,7 @@ The point of it is using those data structures in learning algotrithms that are 
 This repository contains JavaScript examples of many popular data structures.
 
 Note that this project is meant to be used for learning and researching purposes 
-only and it is **not** meant to be used for production.*
+only and it is **not** meant to be used for production.
 
 ## Data Structures
 
