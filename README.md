@@ -5,7 +5,7 @@ The point of it is using those data structures in learning algotrithms that are 
   
 This repository contains JavaScript examples of many popular data structures.
 
-*☝ Note that this project is meant to be used for learning and researching purposes 
+Note that this project is meant to be used for learning and researching purposes 
 only and it is **not** meant to be used for production.*
 
 ## Data Structures
@@ -107,7 +107,7 @@ A simple unordered tree; in this diagram, the node labeled 7 has
 two children, labeled 2 and 6, and one parent, labeled 2. The
 root node, at the top, has no parent.
 
-### Heap (data-structure)
+### Heap  
 
 In computer science, a **heap** is a specialized tree-based 
 data structure that satisfies the heap property described
